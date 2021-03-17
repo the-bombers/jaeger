@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from jaegerserver.models import Monster, Sighting
+
+admin.site.register(Monster)
+admin.site.register(Sighting)
