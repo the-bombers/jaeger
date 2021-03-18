@@ -3,7 +3,8 @@ from .models import Monster, Sighting, Location
 
 from django.http import HttpResponse
 
-from .models import Monster, Sighting
+from .models import Monster, Sighting, Location
+
 
 def index(request):
     return HttpResponse("Monsters from Beyond")
@@ -32,3 +33,7 @@ def monsterSightings(request, monsters_id):
     sightDay = [s.day for s in sightingsList]
     return HttpResponse(sightDay)
     # return HttpResponse(“I’m still working”)
+
+    context = {"locations": Location.objects.all()}
+    # location_list = [l.location for l in locations]
+    return render(request, "jaegerserver/locations.html", context)
