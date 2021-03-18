@@ -12,8 +12,8 @@ def index(request):
 
 
 def monsters(request):
-    monsters = Monster.objects.all()
-    return render(request, "jaegerserver/monster_list.html", monsters)
+    context = {"monsters": Monster.objects.all()}
+    return render(request, "jaegerserver/monster_list.html", context)
 
 def sightings(request):
     sightings = Sighting.objects.all()
