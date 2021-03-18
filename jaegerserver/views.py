@@ -24,6 +24,10 @@ def locations(request):
     location_list = [l.location for l in locations]
     return HttpResponse(location_list)
 
+def locations_detail(request, location_id):
+    location = Location.objects.get(pk=location_id)
+    return render(request, "jaegerserver/location_detail.html", location)
+
 def monsterSightings(request, monsters_id):
     monster = Monster.objects.get(pk=monsters_id)
     # monsterId = monsters()

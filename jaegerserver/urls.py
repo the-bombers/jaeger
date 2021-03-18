@@ -8,6 +8,8 @@ urlpatterns = [
          views.monsters_detail, name="monsters_details"),
     path("monsters/", views.monsters, name="monsters"),
     path("locations/", views.locations, name="locations"),
-    path("monsters/<int:monsters_id>/sightings", views.monsterSightings, name="monsterSightings")
+    path("monsters/<int:monsters_id>/sightings", views.monsterSightings, name="monsterSightings"),
+    path('locations/<int:location_id>/',
+         views.locations_detail, name="location_details"),
 
 ]
