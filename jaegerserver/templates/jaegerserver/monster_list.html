@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}Monsters List{% endblock %} {% block
+content %}
+<h1>Monsters Roaming Amongst Us</h1>
+{% for monster in monsters %}
+<div class="monster-card">
+  <h2>{{ monster.name }}</h2>
+  <!-- insert monster image -->
+  <p>Species: {{ monster.species }}</p>
+</div>
+{% endfor %} {% endblock %}
