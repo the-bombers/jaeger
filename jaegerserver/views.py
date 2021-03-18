@@ -16,6 +16,9 @@ def sightings(request):
     monsterSightings = [s.monster.species for s in sightings]
     return HttpResponse(monsterSightings)
 
+def monsters_detail(request, monster_id):
+    monster = Monster.objects.get(pk=monster_id)
+    return render(request, "jaeger/monster_detail.html", monster)
 
 def locations(request):
     locations = Locations.objects.all()
