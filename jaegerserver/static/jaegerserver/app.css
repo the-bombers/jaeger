@@ -1,0 +1,12 @@
+[className=locationWrapper]{
+display: block;
+justify-content: center;
+}
+
+h1{
+    color: brown;
+}
+
+p{
+    font-size: 15px;
+}
