@@ -7,6 +7,3 @@ class Monster(models.Model):
 class Sighting(models.Model):
     monster = models.ForeignKey(Monster, on_delete=models.CASCADE)
     day = models.CharField(max_length=20)
-
-
-
