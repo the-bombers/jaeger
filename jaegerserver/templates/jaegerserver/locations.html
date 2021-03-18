@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %} Locations{% endblock %} {% block content %}
+<h1>Locations</h1>
+
+<ul>
+  {% for location in locations %}
+  <li>Location: {{location.location}}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
