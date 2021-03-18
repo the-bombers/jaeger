@@ -4,7 +4,7 @@ from .models import Monster, Sighting, Location
 
 from django.http import HttpResponse
 
-from .models import Monster, Sighting
+from .models import Monster, Sighting, Location
 
 
 def index(request):
@@ -14,7 +14,6 @@ def index(request):
 def monsters(request):
     monsters = Monster.objects.all()
     return render(request, "jaegerserver/monster_list.html", monsters)
-
 
 def sightings(request):
     sightings = Sighting.objects.all()
@@ -28,11 +27,9 @@ def monsters_detail(request, monster_id):
 
 
 def locations(request):
-
     context = {"locations": Location.objects.all()}
     # location_list = [l.location for l in locations]
     return render(request, "jaegerserver/locations.html", context)
-
 
 def monsterSightings(request, monsters_id):
     monster = Monster.objects.get(pk=monsters_id)
