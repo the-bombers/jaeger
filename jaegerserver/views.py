@@ -15,4 +15,4 @@ def sightings(request):
 
 def monsters_detail(request, monster_id):
     monster = Monster.objects.get(pk=monster_id)
-    return HttpResponse(monster.name)
+    return render(request, "jaeger/monster_detail.html", monster)
