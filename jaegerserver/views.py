@@ -4,7 +4,7 @@ from .models import Monster, Sighting, Location
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Monsters from Beyond")
+    return render(request, "jaegerserver/index.html")
 
 def monsters(request):
     context = {"monsters": Monster.objects.all()}
@@ -25,10 +25,8 @@ def locations(request):
 
 def monsterSightings(request, monsters_id):
     monster = Monster.objects.get(pk=monsters_id)
-    sightingsList = monster.sighting_set.all()
-    sightDay = [s.day for s in sightingsList]
-    return HttpResponse(sightDay)
-    # return HttpResponse(“I’m still working”)
+    context = {"sightingsList":monster.sighting_set.all(), "monster":monster}
+    return render(request, "jaegerserver/sightings_list.html", context)
 
 def locations_detail(request, location_id):
     context = {"location": Location.objects.get(pk=location_id)}

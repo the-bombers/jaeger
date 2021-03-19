@@ -1,4 +1,9 @@
-{% extends "base.html" %} {% block title %}Monsters List{% endblock %}
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'jaegerserver/app.css' %}">
+{% endblock %}
+{% block title %}Monsters List{% endblock %}
 {% block content %}
 <h1>Monsters Roaming Amongst Us</h1>
 {% for monster in monsters %}

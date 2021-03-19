@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block css %}{% endblock %}
+    <title>{% block title %} {% endblock %}</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {% block css %} {% endblock %}
-  <title>{% block title %} {% endblock %}</title>
-</head>
+  <body>
+    <nav>
+      <div class="container-fluid">
+        <!-- Header-->
+        <div class="navbar-header">
+          <div class="navbar navbar-inverse">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#topNavBar"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-band" href="">Jager-monsters</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <button class="btn">
+                <li>
+                  <a href="./base.html"> Home </a>
+                </li>
+              </button>
+              <button class="btn">
+                <li>
+                  <a href="/locations/">locations</a>
+                </li>
+              </button>
+              <button class="btn">
+                <li>
+                  <a href="/monsters/">Monsters</a>
+                </li>
+              </button>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-<body>
-  {% block content %}{% endblock %}
-</body>
-
+    {% block content %}{% endblock %}
+  </body>
 </html>

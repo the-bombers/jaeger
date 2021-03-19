@@ -1,2 +1,7 @@
 {% extends "base.html" %} {% block title %}{{monster.name}}{% endblock %}
 <h1>Monster: {{monster.name}}</h1>
+
+<ul>
+  {% for key, value in monster.items %}
+  <li><h4>{{key}} : {{value}}</h4></li>
+</ul>
