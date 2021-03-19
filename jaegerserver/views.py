@@ -25,11 +25,5 @@ def locations(request):
 
 def monsterSightings(request, monsters_id):
     monster = Monster.objects.get(pk=monsters_id)
-    sightingsList = monster.sighting_set.all()
-    sightDay = [s.day for s in sightingsList]
-    return HttpResponse(sightDay)
-    # return HttpResponse(“I’m still working”)
-
-def locations_detail(request, location_id):
-    context = {"location": Location.objects.get(pk=location_id)}
-    return render(request, "jaegerserver/location_detail.html", context)
+    context = {"sightingsList":monster.sighting_set.all(), "monster":monster}
+    return render(request, "jaegerserver/sightings_list.html", context)
