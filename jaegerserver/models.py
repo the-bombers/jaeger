@@ -13,3 +13,4 @@ class Sighting(models.Model):
 class Location(models.Model):
     sighting = models.ForeignKey(Sighting, on_delete=models.CASCADE)
     location = models.CharField(max_length=50)
+    history = models.CharField(max_length=1000)
