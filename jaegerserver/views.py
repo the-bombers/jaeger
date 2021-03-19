@@ -27,3 +27,7 @@ def monsterSightings(request, monsters_id):
     monster = Monster.objects.get(pk=monsters_id)
     context = {"sightingsList":monster.sighting_set.all(), "monster":monster}
     return render(request, "jaegerserver/sightings_list.html", context)
+
+def locations_detail(request, location_id):
+    context = {"location": Location.objects.get(pk=location_id)}
+    return render(request, "jaegerserver/location_detail.html", context)
