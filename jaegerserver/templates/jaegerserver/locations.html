@@ -1,4 +1,9 @@
-{% extends "base.html" %} {% block title %} Locations{% endblock %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'jaegerserver/app.css' %}">
+{% endblock %}
+{% block title %} Locations{% endblock %} {% block content %}
 <h1>Locations</h1>
 
 <ul>

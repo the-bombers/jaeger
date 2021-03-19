@@ -1,2 +1,7 @@
-{% extends "base.html" %} {% block title %}{{monster.name}}{% endblock %}
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'jaegerserver/app.css' %}">
+{% endblock %}
+{% block title %}{{monster.name}}{% endblock %}
 <h1>Monster: {{monster.name}}</h1>
