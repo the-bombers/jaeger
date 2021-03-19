@@ -5,11 +5,17 @@ class Monster(models.Model):
     name = models.CharField(max_length=200)
     danger_level = models.IntegerField(default=0)
     features = models.JSONField()
+    def __str__(self):
+        return self.name
 
 class Sighting(models.Model):
     monster = models.ForeignKey(Monster, on_delete=models.CASCADE)
     day = models.CharField(max_length=20)
+    def __str__(self):
+        return f"{self.monster.name}: {self.day}"
 
 class Location(models.Model):
     sighting = models.ForeignKey(Sighting, on_delete=models.CASCADE)
     location = models.CharField(max_length=50)
+    def __str__(self):
+        return self.location

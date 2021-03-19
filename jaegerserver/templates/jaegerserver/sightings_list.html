@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %}Sightings List{% endblock %}
+{% block content %}
+<h1>Recorded sightings of {{monster.name}}</h1>
+<p>Species: {{ monster.species }}</p>
+{% for sighting in sightingsList %}
+<div class="monster-card">
+  <h2>{{ sighting }}</h2>
+  <!-- insert monster image -->
+  
+</div>
+{% endfor %} {% endblock %}
