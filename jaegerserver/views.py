@@ -29,3 +29,7 @@ def monsterSightings(request, monsters_id):
     sightDay = [s.day for s in sightingsList]
     return HttpResponse(sightDay)
     # return HttpResponse(“I’m still working”)
+
+def locations_detail(request, location_id):
+    context = {"location": Location.objects.get(pk=location_id)}
+    return render(request, "jaegerserver/location_detail.html", context)
