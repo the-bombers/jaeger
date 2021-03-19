@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'jaegerserver/app.css' %}">
+{% endblock %}
+{% block title %}Monsters From Beyond | Home{% endblock %}
+{% block content %}
+<div class="content-container">
+    <h1>Monsters Roaming Amongst Us</h1>
+    <p>Creatures, ghouls, ghosts, unearthly-beings - many have been sighted but what's lurking around your corner?</p>
+    <div class="home-content">
+        <div class="home-card">
+            <h2>Monsters</h2>
+            <img src="{% static 'jaegerserver/miskatonic.jpg' %}">
+            <button class="btn btn-primary">Explore what's out there</button>
+        </div>
+        <div class="home-card">
+            <h2>Location</h2>
+            <img src="{% static 'jaegerserver/miskatonic.jpg' %}">
+            <button class="btn btn-primary">Discover where they lurk</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

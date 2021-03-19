@@ -4,7 +4,7 @@ from .models import Monster, Sighting, Location
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Monsters from Beyond")
+    return render(request, "jaegerserver/index.html")
 
 def monsters(request):
     context = {"monsters": Monster.objects.all()}
