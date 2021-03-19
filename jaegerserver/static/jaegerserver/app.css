@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'IM Fell English SC', serif;
     margin: 0;
     color: var(--orangeAccent);
+    padding-bottom: 1em;
 }
 
 p {
@@ -104,6 +105,14 @@ h3 {
     text-align: center;
 }
 
+.home-content {
+    padding: 2em 0;
+}
+
+.home-card {
+    padding-bottom: 2em;
+}
+
 /* ----- Media Queries ----- */
 
 @media (min-width: 700px) {
@@ -118,5 +127,11 @@ h3 {
     .content-container {
         width: 70%;
         max-width: 1200px;
+        padding: 3em 0;
+    }
+
+    .home-content {
+        display: flex;
+        justify-content: space-evenly;
     }
 } 
