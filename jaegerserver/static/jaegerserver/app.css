@@ -1,0 +1,109 @@
+/***** Global CSS *****/
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Josefin+Sans&display=swap');
+/* 
+font-family: 'IM Fell English SC', serif; - for headings
+font-family: 'Josefin Sans', sans-serif; - body text
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.4;
+    font-family: 'Josefin Sans', sans-serif;
+    background: var(--darkBkgd);
+    color: var(--lightFont);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'IM Fell English SC', serif;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*----- Colours -----*/
+/* All colours can be used using var(--colourYouWant) */
+
+:root {
+   /* Main colors */
+    --darkBkgd: #182515;
+    --lightBkgd: #e9e3c7; 
+    --orangeAccent: #dd512a;
+    --greenAccent: #24391e;
+    --darkerOrange: #df3f12;
+    --darkerGreen: #182515; 
+    --lightFont: #e9e3c7; /* main font on darkBkgd */
+    --darkFont: #070804; /* secondary font on lightBkgd */
+}
+
+
+/* ----- Fonts -----*/ 
+
+/* h1 {
+    font-size: 2.441rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.563rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+} */
+
+
+/* ----- Buttons ----- */ 
+
+.btn {
+    display: inline-block;
+    font-size: 1.125rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 1em 1em;
+}
+
+.btn-primary {
+    background: var(--orangeAccent);
+    color: var(--lightFont); 
+}
+
+.btn-primary:hover {
+    background: var(--darkerOrange);
+ }
+
+.btn-secondary { 
+    background: var(--greenAccent);
+    color: var(--lightFont);
+}
+
+.btn-secondary:hover {
+    background: var(--darkerGreen);
+ }
+
+/* ----- Media Queries ----- */
+
+/* @media (min-width: 700px) {
+
+}
+
+@media (min-width: 1000px) {
+
+} */
