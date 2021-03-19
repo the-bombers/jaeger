@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'jaegerserver/app.css' %}">
+{% endblock %}
+{% block title %}{{location.location}}{% endblock %}{% block content %}
+<div className="locationWrapper">
+    <div className="locationTitle">
+        <h1>Location: {{location.location|lower}}</h1>
+    </div>
+    <img src="{% static 'jaegerserver/miskatonic.jpg' %}">
+    <p>History:</p>
+    <p>{{location.history}}</p>
+</div>
+{% endblock %}
